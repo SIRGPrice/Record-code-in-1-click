@@ -71,95 +71,94 @@ Recordings are saved automatically to your workspace `.recordings/` folder
 </tr>
 </table>
 
-You can also open any command from the **Command Palette** (`Ctrl+Shift+P`):
+You can also open any command from the **Command Palette** (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>):
 
-```
-RecordCode: Take Screenshot
-RecordCode: Start Recording
-RecordCode: Stop Recording
-```
+| Command |
+|:--------|
+| 📸 RecordCode: Take Screenshot |
+| 🔴 RecordCode: Start Recording |
+| ⏹️ RecordCode: Stop Recording |
 
 ---
 
 ## 🤖 MCP Tools for AI Agents
 
-The extension registers 4 language model tools that Copilot Chat agents can autonomously invoke:
+The extension provides 4 smart tools that Copilot Chat agents can use autonomously:
 
 | Tool | Description |
 |:-----|:------------|
-| 📸 **`recordcode_screenshot`** | Take a screenshot, returns image data directly to model |
-| 🔴 **`recordcode_record_start`** | Start screen recording with configurable options |
-| ⏹️ **`recordcode_record_stop`** | Stop recording, extract key frames as images |
-| ℹ️ **`recordcode_record_status`** | Query recording state, duration, and file size |
+| 📸 **Screenshot** | Take a screenshot and return image data directly to the AI model |
+| 🔴 **Start Recording** | Begin screen recording with configurable options |
+| ⏹️ **Stop Recording** | Stop recording and extract key frames as images |
+| ℹ️ **Recording Status** | Query recording state, duration, and file size |
 
 ---
 
 ## ⌨️ Keyboard Shortcuts
 
-| Command | Keybinding |
-|:--------|:----------:|
-| Take Screenshot | `Ctrl+Shift+Alt+S` |
-| Start Recording | `Ctrl+Shift+Alt+R` |
-| Stop Recording | `Ctrl+Shift+Alt+X` |
+| Command | Shortcut |
+|:--------|:--------:|
+| Take Screenshot | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd> |
+| Start Recording | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd> |
+| Stop Recording | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd> |
 
 ---
 
 ## 🎯 Recording Triggers
 
-### Process Trigger
-
-Start recording when a specific process appears, auto-stop when it exits:
-
-```json
-trigger: { type: "process", processName: "notepad.exe" }
-```
-
-### Delay Trigger
-
-Start recording after a countdown:
-
-```json
-trigger: { type: "delay", delay: 5 }
-```
-
-### Stability Auto-Stop
-
-Automatically stop recording when screen becomes visually stable:
-
-```json
-autoStopOnStability: true
-```
-
-### VS Code Event Triggers
-
-Auto-record on debug sessions, tasks, or test runs via settings:
-
-```
-recordcode.triggerOnDebug — Auto-record during debug sessions
-recordcode.triggerOnTask  — Auto-record during task execution
-recordcode.triggerOnTest  — Auto-record during test runs
-```
+<table>
+<tr>
+<td>🖥️</td>
+<td><strong>Process Trigger</strong></td>
+<td>Start recording when a specific process appears — auto-stop when it exits</td>
+</tr>
+<tr>
+<td>⏳</td>
+<td><strong>Delay Trigger</strong></td>
+<td>Start recording after a configurable countdown</td>
+</tr>
+<tr>
+<td>📐</td>
+<td><strong>Stability Auto-Stop</strong></td>
+<td>Automatically stop recording when screen becomes visually stable</td>
+</tr>
+<tr>
+<td>🐛</td>
+<td><strong>Debug Trigger</strong></td>
+<td>Auto-record during debug sessions</td>
+</tr>
+<tr>
+<td>📋</td>
+<td><strong>Task Trigger</strong></td>
+<td>Auto-record during task execution</td>
+</tr>
+<tr>
+<td>🧪</td>
+<td><strong>Test Trigger</strong></td>
+<td>Auto-record during test runs</td>
+</tr>
+</table>
 
 ---
 
 ## ⚙️ Settings
 
-Customize RecordCode through VS Code settings:
+Customize RecordCode through the settings menu or VS Code settings:
 
 | Setting | Default | Options |
 |:--------|:-------:|:--------|
-| `recordcode.defaultFormat` | `"mp4"` | `"mp4"` · `"webm"` · `"gif"` |
-| `recordcode.defaultFps` | `15` | Frame rate `1`–`60` |
-| `recordcode.defaultQuality` | `"medium"` | `"low"` · `"medium"` · `"high"` |
-| `recordcode.outputDirectory` | workspace `.recordings/` | Custom output path |
-| `recordcode.maxFramesInContext` | `5` | Max key frames returned to AI (`1`–`20`) |
-| `recordcode.autoStopOnStability` | `false` | Auto-stop on visual stability |
-| `recordcode.stabilityThreshold` | `0.5` | MSE threshold for stability (`0`–`100`) |
-| `recordcode.stabilityChecks` | `3` | Consecutive stable checks needed |
-| `recordcode.triggerOnDebug` | `false` | Auto-record on debug sessions |
-| `recordcode.triggerOnTask` | `false` | Auto-record on task execution |
-| `recordcode.triggerOnTest` | `false` | Auto-record on test runs |
-| `recordcode.triggerTaskFilter` | `"*"` | Glob pattern to filter tasks |
+| Output Format | MP4 | MP4 · WebM · GIF |
+| Frame Rate | 15 fps | 1 – 60 fps |
+| Quality | Medium | Low · Medium · High |
+| Output Folder | Workspace `.recordings/` | Custom output path |
+| Max Key Frames for AI | 5 | 1 – 20 frames |
+| Auto-Stop on Stability | Off | On / Off |
+| Stability Threshold | 0.5 | 0 – 100 |
+| Stability Checks | 3 | Consecutive stable checks needed |
+| Auto-Record on Debug | Off | On / Off |
+| Auto-Record on Tasks | Off | On / Off |
+| Auto-Record on Tests | Off | On / Off |
+| Task Filter | All tasks | Custom glob pattern |
 
 💡 **Tip:** Access recording controls quickly by hovering over the status bar icon.
 
@@ -167,9 +166,11 @@ Customize RecordCode through VS Code settings:
 
 ## 📋 Requirements
 
-- VS Code **1.96.0+**
-- **Windows** (uses GDIgrab for screen capture)
-- FFmpeg is **bundled automatically** via `@ffmpeg-installer/ffmpeg`
+| Requirement | Details |
+|:------------|:--------|
+| 🟦 **VS Code** | Version **1.96.0** or higher |
+| 🪟 **Platform** | Windows (uses native screen capture) |
+| 🎞️ **FFmpeg** | Bundled automatically — no manual setup needed |
 
 ---
 
