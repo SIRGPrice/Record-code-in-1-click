@@ -9,6 +9,8 @@
 
 One click. Smart recordings. Zero config needed. Local and private.
 
+To install type _Install from VSIX_ in the vs code top comand bar and select the downloaded .vsix on the explorer.
+
 </div>
 
 ---
