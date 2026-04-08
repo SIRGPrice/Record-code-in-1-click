@@ -4,7 +4,7 @@
 
 ### Screen capture and video recording for AI agents — directly from VS Code
 
-TO INSTALL type _Install from VSIX_ in the vs code top comand bar and select the downloaded .vsix on the explorer.
+[TO INSTALL](https://github.com/SIRGPrice/Record-code-in-1-click/releases/tag/V1) type _Install from VSIX_ in the vs code top comand bar and select the [downloaded .vsix](https://github.com/SIRGPrice/Record-code-in-1-click/releases/tag/V1) on the explorer.
 
 [![VS Code](https://img.shields.io/badge/VS%20Code-v1.96+-007ACC?logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue)](https://marketplace.visualstudio.com/)
