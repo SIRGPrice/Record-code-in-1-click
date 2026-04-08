@@ -1,8 +1,6 @@
 # 📝 Changelog
 
-## v0.0.1 - 🚀 Beta release, free for everyone!
-
-## v0.0.2 - 🎉 Initial release, free features forever!
+## v0.0.1 - 🎉 Initial release, free features forever!
 
 - Start and stop screen recordings from the status bar in 1 click
 - Instant screenshots — full screen, specific windows, or custom regions
@@ -14,12 +12,12 @@
 - Stability detection — auto-stop when screen becomes visually stable
 - Multiple export formats: MP4, WebM, and GIF
 - Bundled FFmpeg — zero manual setup needed
-
-# 📝 Future roadmap
-
 - Support for everyone, forever
 - Premium features (coming soon at $1 per month)
   - Advanced MCP tools for deeper AI agentic workflows
+
+# 📝 Future roadmap
+
 - macOS and Linux support
 - Full customization of recording settings (frame rate, quality, regions, etc.)
 - Advanced trigger options (scheduled recordings, hotkey combos, etc.)
